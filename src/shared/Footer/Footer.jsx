@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-        <div>
+        <div className="text-center">
             <small>This website copy right is news</small>
         </div>
     );

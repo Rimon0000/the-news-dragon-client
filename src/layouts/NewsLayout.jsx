@@ -2,20 +2,16 @@ import React from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../shared/Footer/Footer";
 import Header from "../shared/Header/Header";
-import LeftNav from "../shared/LeftNav/LeftNav";
 import RightNav from "../shared/RightNav/RightNav";
 import { Outlet } from "react-router-dom";
 
-const Main = () => {
+const NewsLayout = () => {
     return (
         <div>
             <Header></Header>
             <Container>
                   <Row>
-                   <Col lg={3}>
-                    <LeftNav></LeftNav>
-                   </Col>
-                   <Col lg={6}>
+                   <Col lg={9}>
                     <Outlet></Outlet>
                    </Col>
                    <Col lg={3}>
@@ -24,8 +20,9 @@ const Main = () => {
                   </Row>
             </Container>
             <Footer></Footer>
+            
         </div>
     );
 };
 
-export default Main;
+export default NewsLayout;
